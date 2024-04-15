@@ -13,7 +13,7 @@
     },
     "scripts": {
         "start": "PORT=8080 react-scripts start",
-        "build": "react-scripts --openssl-legacy-provider build",
+        "build": "PORT=8080 react-scripts build",
         "dev": "set PORT=3000 && react-scripts --openssl-legacy-provider start"
     },
     "eslintConfig": {
