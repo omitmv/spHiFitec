@@ -1,0 +1,11 @@
+# Ignorar todos os arquivos na pasta node_modules
+node_modules/
+
+# Ignorar todos os arquivos na pasta build
+build/
+
+# Ignorar o arquivo de configuração do webpack
+webpack.config.js
+
+# Ignorar todos os arquivos .json
+*.json
