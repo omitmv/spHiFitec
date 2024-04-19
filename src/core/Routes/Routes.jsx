@@ -4,12 +4,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { GlobalContext } from '../Context'
 import { authReducer, authInitialState } from '../auth'
 
-//import { Home } from '../../features/Home'
+import { Home } from '../../features/Home'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div />
+    element: <Home />
   }
 ])
 
