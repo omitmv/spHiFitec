@@ -2,7 +2,8 @@ import React from 'react'
 import { Carousel, Container, Row, Col } from 'react-bootstrap'
 
 import { Navbar } from '../../Navbar'
-import { FormContact } from '../../FormContact'
+import { FormContact } from './FormContact'
+import { SessionMaps } from './SessionMaps'
 
 export class Home extends React.Component {
   render() {
@@ -53,15 +54,14 @@ export class Home extends React.Component {
         <footer>
           <Container>
             <Row>
-              <Col>
+              <Col md="4">
                 <h2>Redes Sociais e Endereço</h2>
                 {/* Add your social media links and address here */}
               </Col>
-              <Col>
-                <h2>Mapa</h2>
-                {/* Add your map here */}
+              <Col md="4">
+                <SessionMaps />
               </Col>
-              <Col>
+              <Col md="4">
                 <h2>Texto</h2>
                 {/* Add your text here */}
               </Col>
