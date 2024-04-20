@@ -13,7 +13,7 @@ export class Home extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./image1.jpg"
+              src="./1920x1080.png"
               alt="First slide"
               style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
@@ -21,7 +21,7 @@ export class Home extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./image2.jpg"
+              src="./1920x1080.png"
               alt="Second slide"
               style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
@@ -29,7 +29,7 @@ export class Home extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./image3.jpg"
+              src="./1920x1080.png"
               alt="Third slide"
               style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
