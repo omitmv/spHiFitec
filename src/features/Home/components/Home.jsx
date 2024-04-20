@@ -2,19 +2,20 @@ import React from 'react'
 import { Carousel, Container, Row, Col } from 'react-bootstrap'
 
 import { Navbar } from '../../Navbar'
+import { FormContact } from '../../FormContact'
 
 export class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className="bg-body-tertiary">
         <Navbar />
-        <h1>Home</h1>
         <Carousel>
           <Carousel.Item>
             <img
               className="d-block w-100"
               src="./image1.jpg"
               alt="First slide"
+              style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
           </Carousel.Item>
           <Carousel.Item>
@@ -22,6 +23,7 @@ export class Home extends React.Component {
               className="d-block w-100"
               src="./image2.jpg"
               alt="Second slide"
+              style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
           </Carousel.Item>
           <Carousel.Item>
@@ -29,15 +31,13 @@ export class Home extends React.Component {
               className="d-block w-100"
               src="./image3.jpg"
               alt="Third slide"
+              style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
           </Carousel.Item>
         </Carousel>
         <Container>
           <Row>
-            <Col>
-              <h2>Formulário de Contato</h2>
-              {/* Add your contact form here */}
-            </Col>
+            <FormContact />
           </Row>
           <Row>
             <Col md={6}>
