@@ -6,25 +6,14 @@ export class Navbar extends React.Component {
     return (
       <NavBoot expand="lg" className="bg-body-tertiary">
         <Container>
-          <NavBoot.Brand href="#home">Hi-Fitec</NavBoot.Brand>
+          <NavBoot.Brand href="/">Hi-Fitec</NavBoot.Brand>
           <NavBoot.Toggle aria-controls="basic-navbar-nav" />
           <NavBoot.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="#contact">Contato</Nav.Link>
+              <Nav.Link href="#about">Sobre</Nav.Link>
             </Nav>
           </NavBoot.Collapse>
         </Container>
