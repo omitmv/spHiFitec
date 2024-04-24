@@ -5,11 +5,12 @@ import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa'
 import { FormContact } from './FormContact'
 import { SessionMaps } from './SessionMaps'
 import { Navbar } from '../../Navbar'
+import { FloatButton } from './FloatButton'
 
 export class Home extends React.Component {
   render() {
     return (
-      <div className="bg-body-tertiary">
+      <div id="home" className="bg-body-tertiary">
         <Navbar />
         <Carousel>
           <Carousel.Item>
@@ -38,7 +39,7 @@ export class Home extends React.Component {
           </Carousel.Item>
         </Carousel>
         <Container>
-          <Row>
+          <Row id="about">
             <Col md={6} style={{ minHeight: '500px', alignContent: 'center' }}>
               <Carousel>
                 <Carousel.Item>
@@ -70,10 +71,14 @@ export class Home extends React.Component {
               </center>
             </Col>
           </Row>
-          <Row style={{ minHeight: '500px', alignContent: 'center' }}>
+          <Row
+            id="contact"
+            style={{ minHeight: '500px', alignContent: 'center' }}
+          >
             <FormContact />
           </Row>
         </Container>
+        <FloatButton />
         <footer className="bg-body-secondary">
           <Container>
             <Row>
@@ -103,8 +108,16 @@ export class Home extends React.Component {
                 <SessionMaps />
               </Col>
               <Col md="4">
-                <h2>Texto</h2>
-                {/* Add your text here */}
+                <h2>hi-fitec</h2>
+                <h3>
+                  <a href="#home">Home</a>
+                </h3>
+                <h3>
+                  <a href="#contact">Contato</a>
+                </h3>
+                <h3>
+                  <a href="#about">Sobre</a>
+                </h3>
               </Col>
             </Row>
           </Container>

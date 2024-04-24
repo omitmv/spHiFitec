@@ -64,9 +64,9 @@ export class FormContact extends React.Component {
             onChange={this.handleChange}
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
+        <br />
+        <Button variant="success" type="submit">
+          Enviar
         </Button>
       </Form>
     )
