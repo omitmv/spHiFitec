@@ -78,15 +78,24 @@ export class Home extends React.Component {
           <Container>
             <Row>
               <Col md="4">
-                <ul>
+                <ul style={{ listStyle: 'none' }}>
+                  <br />
                   <li>
-                    <FaLinkedin /> LinkedIn
+                    <a href="https://www.linkedin.com/in/rafael-valverde-19454145/">
+                      <FaLinkedin style={{ fontSize: '3rem' }} />
+                    </a>
                   </li>
+                  <br />
                   <li>
-                    <FaInstagram /> Instagram
+                    <a href="https://www.instagram.com/omitmv/">
+                      <FaInstagram style={{ fontSize: '3rem' }} />
+                    </a>
                   </li>
+                  <br />
                   <li>
-                    <FaFacebook /> Facebook
+                    <a href="https://www.facebook.com/rafael.valverde.90857/">
+                      <FaFacebook style={{ fontSize: '3rem' }} />
+                    </a>
                   </li>
                 </ul>
               </Col>
