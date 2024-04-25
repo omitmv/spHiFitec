@@ -68,11 +68,49 @@ export class Home extends React.Component {
             </Col>
             <Col md={6} style={{ minHeight: '500px', alignContent: 'center' }}>
               <center>
+                <h1>
+                  Bem-vindo à Hi-Fitec!{' '}
+                  <span role="img" aria-label="emoji de foguete">
+                    🚀
+                  </span>
+                </h1>
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Incidunt excepturi dignissimos aspernatur aliquid quod debitis
-                  quae id? Officiis optio odit ipsam assumenda facilis ipsa
-                  nihil, ullam non accusamus fugiat odio!
+                  Na Hi-Fitec, somos mais do que apenas uma empresa de software.
+                  Somos criadores, inovadores e solucionadores de problemas.
+                  Aqui está o que nos diferencia:
+                </p>
+
+                <p>1. Paixão pela Tecnologia</p>
+                <p>
+                  Nós respiramos código e sonhamos com algoritmos. Nossa equipe
+                  é apaixonada por desenvolvimento de software, inteligência
+                  artificial, nuvem e tecnologias emergentes. Se você está
+                  procurando um lugar onde a paixão pela tecnologia é o nosso
+                  combustível, você está no lugar certo.
+                </p>
+
+                <p>2. Cultura Colaborativa</p>
+                <p>
+                  Na Hi-Fitec, acreditamos que as melhores ideias surgem quando
+                  trabalhamos juntos. Nossa cultura é baseada na colaboração,
+                  respeito e inovação. Aqui, todos têm voz e são incentivados a
+                  contribuir com suas perspectivas únicas.
+                </p>
+
+                <p>3. Compromisso com a Qualidade</p>
+                <p>
+                  Nossa equipe de desenvolvedores, designers e testadores está
+                  comprometida em entregar software de alta qualidade. Não nos
+                  contentamos com menos. Cada linha de código é escrita com
+                  precisão, e cada projeto é testado exaustivamente para
+                  garantir que atenda aos mais altos padrões.
+                </p>
+
+                <p>
+                  Junte-se a nós e vamos construir o futuro juntos!{' '}
+                  <span role="img" aria-label="emoji do globo">
+                    🌐
+                  </span>
                 </p>
               </center>
             </Col>
@@ -87,19 +125,19 @@ export class Home extends React.Component {
                   <br />
                   <li>
                     <a href="https://www.linkedin.com/in/rafael-valverde-19454145/">
-                      <FaLinkedin style={{ fontSize: '3rem' }} />
+                      <FaLinkedin style={{ fontSize: '3rem' }} /> Linkedin
                     </a>
                   </li>
                   <br />
                   <li>
                     <a href="https://www.instagram.com/omitmv/">
-                      <FaInstagram style={{ fontSize: '3rem' }} />
+                      <FaInstagram style={{ fontSize: '3rem' }} /> Instagram
                     </a>
                   </li>
                   <br />
                   <li>
                     <a href="https://www.facebook.com/rafael.valverde.90857/">
-                      <FaFacebook style={{ fontSize: '3rem' }} />
+                      <FaFacebook style={{ fontSize: '3rem' }} /> Facebook
                     </a>
                   </li>
                 </ul>
@@ -108,16 +146,16 @@ export class Home extends React.Component {
                 <SessionMaps />
               </Col>
               <Col md="4">
-                <h2>hi-fitec</h2>
-                <h3>
+                <h3>hi-fitec</h3>
+                <h4>
                   <a href="#home">Home</a>
-                </h3>
-                <h3>
+                </h4>
+                <h4>
                   <a href="#contact">Contato</a>
-                </h3>
-                <h3>
+                </h4>
+                <h4>
                   <a href="#about">Sobre</a>
-                </h3>
+                </h4>
               </Col>
             </Row>
           </Container>
