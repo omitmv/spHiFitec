@@ -5,11 +5,16 @@ import { GlobalContext } from '../Context'
 import { authReducer, authInitialState } from '../auth'
 
 import { Home } from '../../features/Home'
+import { SendEmail } from '../../features/SendEmail'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />
+  },
+  {
+    path: '/send-email',
+    element: <SendEmail />
   }
 ])
 
