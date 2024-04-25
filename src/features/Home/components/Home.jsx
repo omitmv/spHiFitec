@@ -16,7 +16,7 @@ export class Home extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./1920x1080.png"
+              src="./assets/image1.jpg"
               alt="First slide"
               style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
@@ -24,7 +24,7 @@ export class Home extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./1920x1080.png"
+              src="./assets/image2.jpg"
               alt="Second slide"
               style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
@@ -32,20 +32,26 @@ export class Home extends React.Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="./1920x1080.png"
+              src="./assets/image3.jpg"
               alt="Third slide"
               style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
           </Carousel.Item>
         </Carousel>
         <Container>
+          <Row
+            id="contact"
+            style={{ minHeight: '500px', alignContent: 'center' }}
+          >
+            <FormContact />
+          </Row>
           <Row id="about">
             <Col md={6} style={{ minHeight: '500px', alignContent: 'center' }}>
               <Carousel>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src="./1920x1080.png"
+                    src="./assets/image4.jpg"
                     alt="First slide"
                     style={{ maxWidth: '100%', minHeight: '500px' }}
                   />
@@ -53,7 +59,7 @@ export class Home extends React.Component {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src="./1920x1080.png"
+                    src="./assets/image5.jpg"
                     alt="First slide"
                     style={{ maxWidth: '100%', minHeight: '500px' }}
                   />
@@ -70,12 +76,6 @@ export class Home extends React.Component {
                 </p>
               </center>
             </Col>
-          </Row>
-          <Row
-            id="contact"
-            style={{ minHeight: '500px', alignContent: 'center' }}
-          >
-            <FormContact />
           </Row>
         </Container>
         <FloatButton />
