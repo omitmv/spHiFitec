@@ -7,6 +7,10 @@
     {
       "route": "/sendemail",
       "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/notfound",
+      "allowedRoles": ["anonymous"]
     }
   ],
   "navigationFallback": {

@@ -6,6 +6,7 @@ import { authReducer, authInitialState } from '../auth'
 
 import { Home } from '../../features/Home'
 import { SendEmail } from '../../features/SendEmail'
+import { NotFound } from '../../features/NotFound'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/sendemail',
     element: <SendEmail />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ])
 
