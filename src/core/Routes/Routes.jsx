@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: '/send-email',
+    path: '/sendemail',
     element: <SendEmail />
   }
 ])
