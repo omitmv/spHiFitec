@@ -9,7 +9,7 @@ export class FormEmail extends React.Component {
     emailPassword: '',
     subject: '',
     message: '',
-    emails: []
+    emails: [{ email: 'coordenadorti@transfuturoveiculos.com.br' }]
   }
 
   render() {
