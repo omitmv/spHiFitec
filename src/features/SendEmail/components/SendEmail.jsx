@@ -1,32 +1,26 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 import { FormEmail } from './FormEmail'
-import { Button, Container } from 'react-bootstrap'
 
 export class SendEmail extends React.Component {
-  state = {
-    smtp: '',
-    smtpPort: '',
-    emailFrom: '',
-    emailPassword: '',
-    subject: '',
-    message: '',
-    emails: []
-  }
-
-  sendEmail() {
-    console.log('send email')
+  async sendEmail(values) {
+    console.log(values)
   }
 
   render() {
     return (
-      <Container>
-        <h1>Send Email</h1>
-        <FormEmail value={this.state} />
-        <Button variant="success" onClick={this.sendEmail}>
-          Enviar
-        </Button>
-      </Container>
+      <>
+        <Container>
+          <h1>Send Email</h1>
+          <FormEmail
+            value={{
+              sendEmail: value => this.sendEmail(value)
+            }}
+          />
+        </Container>
+        <br />
+      </>
     )
   }
 }
