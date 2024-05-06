@@ -1,61 +1,42 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
+import * as XLSX from 'xlsx'
 
 export class FormEmail extends React.Component {
   state = {
-    smtp: '',
-    smtpPort: '',
-    emailFrom: '',
-    emailPassword: '',
     subject: '',
     message: '',
-    emails: [{ email: 'coordenadorti@transfuturoveiculos.com.br' }]
+    emails: []
+  }
+
+  readExcel = file => {
+    const promise = new Promise((resolve, reject) => {
+      const fileReader = new FileReader()
+      fileReader.readAsArrayBuffer(file)
+
+      fileReader.onload = e => {
+        const bufferArray = e.target.result
+        const wb = XLSX.read(bufferArray, { type: 'buffer' })
+        const wsname = wb.SheetNames[0]
+        const ws = wb.Sheets[wsname]
+        const data = XLSX.utils.sheet_to_json(ws)
+        resolve(data)
+      }
+
+      fileReader.onerror = error => {
+        reject(error)
+      }
+    })
+
+    promise.then(d => {
+      this.setState({ emails: d })
+    })
   }
 
   render() {
     return (
       <div>
         <Form>
-          <Form.Group className="mb-3" controlId="inputSmtp">
-            <Form.Label>SMTP</Form.Label>
-            <Form.Control
-              size="sm"
-              type="text"
-              placeholder="SMTP"
-              value={this.state.smtp}
-              onChange={e => this.setState({ smtp: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="inputSmtpPort">
-            <Form.Label>Porta</Form.Label>
-            <Form.Control
-              size="sm"
-              type="text"
-              placeholder="PORTA"
-              value={this.state.smtpPort}
-              onChange={e => this.setState({ smtpPort: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="inputEmailFrom">
-            <Form.Label>E-mail Envio</Form.Label>
-            <Form.Control
-              size="sm"
-              type="text"
-              placeholder="E-mail Envio"
-              value={this.state.emailFrom}
-              onChange={e => this.setState({ emailFrom: e.target.value })}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="inputEmailPassword">
-            <Form.Label>Senha</Form.Label>
-            <Form.Control
-              size="sm"
-              type="password"
-              placeholder="Senha do E-mail"
-              value={this.state.emailPassword}
-              onChange={e => this.setState({ emailPassword: e.target.value })}
-            />
-          </Form.Group>
           <Form.Group className="mb-3" controlId="inputSubject">
             <Form.Label>Assunto</Form.Label>
             <Form.Control
@@ -78,7 +59,15 @@ export class FormEmail extends React.Component {
           </Form.Group>
           <Form.Group className="mb-3" controlId="inputEmails">
             <Form.Label>E-mails</Form.Label>
-            <Form.Control size="sm" type="file" placeholder="E-mails" />
+            <Form.Control
+              size="sm"
+              type="file"
+              placeholder="E-mails"
+              onChange={e => {
+                const file = e.target.files[0]
+                this.readExcel(file)
+              }}
+            />
           </Form.Group>
           <br />
           <Form.Group className="mb-3" controlId="button">

@@ -1,12 +1,6 @@
-import axios from 'axios'
+import { request } from '../../../utils/utilsRequests'
 
 export const sendEmail = async values => {
-  axios
-    .post('https://apiwebview.azurewebsites.net/util/send-email', values)
-    .then(response => {
-      console.log(response.data)
-    })
-    .catch(error => {
-      console.log(error)
-    })
+  const data = request('/utils/sendEmail', 'post', values)
+  console.log(data)
 }
